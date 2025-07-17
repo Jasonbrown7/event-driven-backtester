@@ -12,9 +12,13 @@ if __name__ == "__main__":
     final_value = backtester.portfolio.positions['total'].iloc[-1]
     sharpe_ratio = backtester.sharpe_ratio
     max_drawdown = backtester.max_drawdown
+    cagr = backtester.cagr
+    volatility = backtester.volatility
 
     print(f"Backtest Results:")
     print(f"-----------------")
     print(f"Final Portfolio Value: ${final_value:,.2f}")
+    print(f"CAGR: {cagr:.2%}")
+    print(f"Annualized Volatility: {volatility:.2%}")
     print(f"Sharpe Ratio: {sharpe_ratio:.2f}")
     print(f"Maximum Drawdown: {max_drawdown:.2%}")
